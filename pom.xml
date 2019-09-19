@@ -7,6 +7,13 @@
     <packaging>pom</packaging>
     <name>gameoflife</name>
     <url>https://github.com/wakaleo/game-of-life</url>
+	<repositories>
+       <repository>
+          <id>central</id>
+          <name>Central</name>
+          <url>http://repo1.maven.org/maven2</url>
+       </repository>
+    </repositories>
     <properties>
         <build.number>SNAPSHOT</build.number>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -204,8 +211,14 @@
             <version>1.9.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>applicationinsights-web</artifactId>
+			<!-- or applicationinsights-core for bare API -->
+			<version>[2.0,)</version>
+		</dependency>
     </dependencies>
-
+	
     <modules>
         <module>gameoflife-build</module>
         <module>gameoflife-core</module>
